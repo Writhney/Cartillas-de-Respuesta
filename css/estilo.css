@@ -385,3 +385,103 @@
     margin: -0.01rem;
     
 }
+
+
+.footer{
+    text-align: center;
+    background-color: #FFC300;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.contenedor-info{
+    display: flex;
+    padding: 2rem 0;
+    gap: 2rem;
+    margin: auto;
+    max-width: 800px;
+}
+
+.Nosotros, .direccion,.contacto{
+    flex: 1;
+}
+.titulo-principal-info{
+    margin: auto;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.titulo-principal-info::before{
+    content: '🔎';
+
+}
+.titulo-principal-info::after{
+    content: '🔍';
+
+}
+
+
+.titulo-info{
+    font-size: 1.3rem;
+}
+.info{
+    font-size: 1rem;
+    flex: 1;
+}
+
+.contenedor-direccion{
+    display: flex;
+    flex-direction: row;
+    
+}
+.contenedor-icono{
+    display: inline-flex;
+    flex: 4rem;
+    max-width: 2rem;
+    margin: auto;
+    padding: 0;
+
+}
+.icono{
+    width: 100%;
+}
+
+.contacto{
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.input-contacto{
+    border: 0.2rem solid black;
+    background-color: #FFFFE0;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+    outline: none;
+}
+
+.input-contacto:focus{
+    border: 0.2rem solid white;
+    background-color: #000;
+    color: white;
+}
+
+.boton-contacto{
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.5s;
+    align-self: center;
+}
+.boton-contacto:hover{
+    background-color: rgb(247, 196, 119);
+    /*border: 0.1rem solid #000;*/
+    color: #000;
+    transform: scale(1.2);
+    /*font-size: 1rem;*/
+    font-weight: bold;
+
+}
