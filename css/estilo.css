@@ -373,3 +373,15 @@
     
     
 }
+
+
+.separador-container{
+    margin: 0;
+    display: flex;
+}
+
+.wave-separador{
+    width: 100%;
+    margin: -0.01rem;
+    
+}
