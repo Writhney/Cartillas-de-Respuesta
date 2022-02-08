@@ -1,248 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Cartillas</title>
 </head>
-<body>
+<body class="body">
+    <header class="header">
+        <nav class="header-nav">
+          <a href="#" class="header-nav__link-logo-container">
+            <img src="./img/technology.png" 
+            alt="Logo Empresa" class="header-nav__logo" />
+          </a>
+          <ul class="header-nav__link-list">
+            <li class="header-nav__link-item">
+              <a href="#generacion" class="header-nav__link">Generación</a>
+            </li>
+            <li class="header-nav__link-item">
+              <a href="#" class="header-nav__link">Calificación</a>
+            </li>
+            <li class="header-nav__link-item">
+              <a href="#informacion" class="header-nav__link">Información</a>
+            </li>
+            
+          </ul>
+        </nav>
+      </header>
 
-  <header>
-    <nav>
-      <a href="#" class="header-nav__link-logo-container">
-        <img src="./img/technology.png" 
-        alt="Logo Empresa" />
-      </a>
-      <ul>
-        <li>
-          <a href="#">Generación</a>
-        </li>
-        <li>
-          <a href="#">Calificación</a>
-        </li>
-        <li>
-          <a href="#" class="header-nav__link">Información</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
-
-
-
-  <main>
-    <h1>Generación de Cartillas de Respuesta</h1>
-    <form>
-      
-      <section >
-
-      <div >
-        <label  for="">Cantidad de Preguntas</label>
-          <input>
-      </div>
-      <div>
-        <label >Cantidad de Alternativas</label>
-          <input>
-      </div>
-      <div >
-        <label >Subir Datos de los Estudiantes</label>
-          <input>
-      </div>
-
-      </section>
-      
-      <section >
-        <div>
+      <main class="requisitoCartilla" id="generacion">
+        <h1 class="titulo-cartilla" >Generación de Cartillas de Respuesta</h1>
+        <form class="form-container">
           
-          <button>
-            <img src="https://cdn-icons-png.flaticon.com/512/4068/4068569.png" alt="Generar"> Generar Cartillas</button>
-        </div>
-        <div >
-          <button>
-            <img src="https://cdn-icons-png.flaticon.com/512/839/839286.png" alt="Imprimir"> Imprimir</button>
-        </div>
-      </section>
-    </form>
-  </main>
+          <section class="section-info">
 
-  <section > 
-    <section >
-      <section >
-        <img  src="https://examen.admisionunajma.pe/public/img/para%20admision.png" alt="LogoInstutucón">
-      </section>
-      <seccion >
-        <div >              
-          <h2 >Datos del Postulante</h2>
+          <div class="cantidadPreguntas-container">
+            <label class="labelPreguntas" for="">Cantidad de Preguntas</label>
+              <input value="20" class="input-pregunta" min="1" max="100" type="number" name="cantPreg" id="">
+          </div>
+          <div class="cantidadPreguntas-container">
+            <label for="labelPreguntas">Cantidad de Alternativas</label>
+              <input value="4" class="input-pregunta" min="1" max="10" type="number" name="cantAlte" id="" minlength="1" maxlength="5">
+          </div>
+          <div class="cantidadPreguntas-container">
+            <label class="labelPreguntas" for="">Subir Datos de los Estudiantes</label>
+              <input class="input-file" type="file" name="datosEstu" src="" alt="">
+          </div>
 
-          <ul >
-            <li >DNI</li>
-            <li >70254251</li>
-            <li >NOMBRES</li>
-            <li >KEVIN ADRIEL</li>
-            <li >APELLIDOS</li>
-            <li >GONZALES LOAYZA</li>
-            <li >CARRERA PROFESIONAL</li>
-            <li >CONTABILIDAD</li>
-          </ul>
-        </div>
-        <div >
-          <h2 >Aula 101</h2>
-          <figure >
-            <img  src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" alt="codigoQR">
-          </figure>
-        </div>
-      </seccion>
+          </section>
+          
+          <section class="section-info2">
+            <div class="container-cartilla">
+              
+              <button class="boton-GenerarI">
+                <img class="boton-img" src="https://cdn-icons-png.flaticon.com/512/4068/4068569.png" alt="Generar"> Generar Cartillas</button>
+            </div>
+            <div class="container-cartilla">
+              <button class="boton-GenerarI" >
+                <img class="boton-img" src="https://cdn-icons-png.flaticon.com/512/839/839286.png" alt="Imprimir"> Imprimir</button>
+            </div>
+          </section>
+        </form>
+      </main>
+
+    <section class="cartilla"> 
+      <section class="cartilla-contedor">
+        <section class="contenedor-logo">
+          <img class="logo-cartilla" src="https://examen.admisionunajma.pe/public/img/para%20admision.png" alt="LogoInstutucón">
+        </section>
+        <seccion class="seccion-cartilla">
+          <div class="contenedor-lista">              
+            <h2 class="cartilla-titulo">Datos del Postulante</h2>
+
+            <ul class="contenedor-lista-datos">
+              <li class="descripcion">DNI</li>
+              <li class="dato">70254251</li>
+              <li class="descripcion">NOMBRES</li>
+              <li class="dato">KEVIN ADRIEL</li>
+              <li class="descripcion">APELLIDOS</li>
+              <li class="dato">GONZALES LOAYZA</li>
+              <li class="descripcion">CARRERA PROFESIONAL</li>
+              <li class="dato">CONTABILIDAD</li>
+            </ul>
+          </div>
+          <div class="contenedor-aula-url">
+            <h2 class="aula-titulo">Aula 101</h2>
+            <figure class="contenedor-url" >
+              <img class="url" src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" alt="codigoQR">
+            </figure>
+          </div>
+        </seccion>
+        
+        <section class="seccion-cartilla2">
+          <div class="contenedor-instrucciones">
+            <h2 class="titulo-instrucciones">Instrucciones</h2>
+            <ul class="lista_instrucciones">
+              <li class="inst">Rellene el círculo completamente y solo uno por respuesta</li>
+              <li class="inst">No arrugue este formulario</li>
+              <li class="inst">No use tinta ni boligrafo</li>
+              <li class="inst">Solo el aplicador o personal autorizado llenará la hora de entrega</li>
+              <li class="inst">Si ha errado la respuesta, borre con cuidado la cartilla y proceda a rellenar su respuesta</li>
+            </ul>
+          </div>
+
+          
+          
+        </section>
+
+        <h2 class="titulo-respuestas">Cartilla de Respuestas</h2>
+        <div class="contenedor-preguntas">
+        <section class="preguntas">
+          
+          <ol class="pregunta-lista">
+            <li class="numero"> 01</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">02</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">03</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">04</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">05</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">06</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">07</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">08</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">09</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">10</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          
+        </section>
       
-      <section >
-        <div >
-          <h2 >Instrucciones</h2>
-          <ul >
-            <li >Rellene el círculo completamente y solo uno por respuesta</li>
-            <li >No arrugue este formulario</li>
-            <li >No use tinta ni boligrafo</li>
-            <li >Solo el aplicador o personal autorizado llenará la hora de entrega</li>
-            <li >Si ha errado la respuesta, borre con cuidado la cartilla y proceda a rellenar su respuesta</li>
-          </ul>
-        </div>
+        <section class="preguntas">
+          
+          <ol class="pregunta-lista">
+            <li class="numero">11</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">12</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">13</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">14</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">15</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">16</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">17</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">18</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">19</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+          <ol class="pregunta-lista">
+            <li class="numero">20</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
+          </ol>
+        </section>
 
-        
-        
-      </section>
-
-      <h2 >Cartilla de Respuestas</h2>
-      <div >
-      <section >
-        
-        <ol>
-          <li >01</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >02</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol>
-          <li >03</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >04</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >05</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol>
-          <li >06</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >07</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol>
-          <li >08</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >09</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >10</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        
-      </section>
-    
-      <section>
-        
-        <ol >
-          <li >11</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >12</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >13</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >14</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >15</li><li >A</li><li>B</li><li >C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >16</li><li>A</li><li >B</li><li >C</li><li >D</li>
-        </ol>
-        <ol >
-          <li >17</li><li >A</li><li>B</li><li >C</li><li >D</li>
-        </ol>
-        <ol >
-          <li>18</li><li>A</li><li>B</li><li >C</li><li>D</li>
-        </ol>
-        <ol >
-          <li >19</li><li>A</li><li>B</li><li>C</li><li >D</li>
-        </ol>
-        <ol>
-          <li>20</li><li>A</li><li>B</li><li>C</li><li>D</li>
-        </ol>
-      </section>
-
-    </div>
-    </section>
-  </section> 
-
-
-  <figure >
-    <svg xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 1440 320"><path fill="#FFC300" fill-opacity="1" 
-    d="M0,128L30,133.3C60,139,120,149,180,165.3C240,181,300,203,360,213.3C420,224,480,224,540,213.3C600,203,660,181,720,165.3C780,149,840,139,900,144C960,149,1020,171,1080,197.3C1140,224,1200,256,1260,272C1320,288,1380,288,1410,288L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
-    </svg>
-  </figure>
-
-
-  <footer>
-        
-    <h2>Información</h2>
-    <div>
-
-      <div >
-        <h2 >Acerca de Nosotros</h2>
-        <p >Somos una empresa enfocada en el area de desarrollo 
-          de Sistemas de Información, Auditoria y soporte de Tecnologias de la Información</p>
-          <a  href="#">
-            <img  src="https://cdn-icons-png.flaticon.com/512/1077/1077093.png" alt="instagram" ></a>
-          <a  href="">
-            <img  src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="twitter" ></a>
-          <a href="">
-            <img src="https://cdn-icons-png.flaticon.com/512/20/20837.png" alt="facebook" ></a>
-          <a  href="">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384028.png" alt="youtube"></a>  
       </div>
-      <div >
-        <h2 >Direción</h2>
-          <div >
-            <a href="">
-                <img  src="https://cdn-icons-png.flaticon.com/512/48/48703.png" alt="ubicacion"></a>
-            <p >Apurímas, Andahuaylas</p>
-          </div>
-          <div >
-            <a  href="">
-                <img  src="https://cdn-icons-png.flaticon.com/512/733/733641.png" alt="whatsapp" ></a>
-            <p >+51 925 523 541</p>
-          </div>
-          <div>
-            <a  href="">
-                <img  src="https://cdn-icons-png.flaticon.com/512/725/725643.png" alt="correo" >
-            </a>
-            <p >Empresa@gmail.com</p>
-        </div>
-      </div>
-      <div >
-        <h2 >Te Contactamos</h2>
-        <input type="text" name="nombre" id="nombre" placeholder="Nombres">
-        <input  type="email" name="email" id="email" placeholder="Email">
-        <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
-        <button>Enviar</button>
-      </div>
-    
-    </div>
+      </section>
+    </section> 
 
-  </footer>
+    <figure class="separador-container">
+      <svg class="wave-separador" xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 1440 320"><path fill="#FFC300" fill-opacity="1" 
+      d="M0,128L30,133.3C60,139,120,149,180,165.3C240,181,300,203,360,213.3C420,224,480,224,540,213.3C600,203,660,181,720,165.3C780,149,840,139,900,144C960,149,1020,171,1080,197.3C1140,224,1200,256,1260,272C1320,288,1380,288,1410,288L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+      </svg>
+    </figure>
   
 
+
+      <footer class="footer" id="informacion">
+        
+        <h2 class="titulo-principal-info">Información</h2>
+        <div class="contenedor-info">
+
+          <div class="Nosotros">
+            <h2 class="titulo-info">Acerca de Nosotros</h2>
+            <p class="info">Somos una empresa enfocada en el area de desarrollo 
+              de Sistemas de Información, Auditoria y soporte de Tecnologias de la Información</p>
+              <a class="contenedor-icono" href="#">
+                <img class="icono" src="https://cdn-icons-png.flaticon.com/512/1077/1077093.png" alt="instagram" ></a>
+              <a class="contenedor-icono" href="">
+                <img class="icono" src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="twitter" ></a>
+              <a class="contenedor-icono" href="">
+                <img class="icono" src="https://cdn-icons-png.flaticon.com/512/20/20837.png" alt="facebook" ></a>
+              <a class="contenedor-icono" href="">
+                <img class="icono" src="https://cdn-icons-png.flaticon.com/512/1384/1384028.png" alt="youtube"></a>  
+          </div>
+          <div class="direccion">
+            <h2 class="titulo-info">Direción</h2>
+              <div class="contenedor-direccion">
+                <a class="contenedor-icono" href="">
+                    <img class="icono" src="https://cdn-icons-png.flaticon.com/512/48/48703.png" alt="ubicacion"></a>
+                <p class="info">Apurímas, Andahuaylas</p>
+              </div>
+              <div class="contenedor-direccion">
+                <a class="contenedor-icono" href="">
+                    <img class="icono" src="https://cdn-icons-png.flaticon.com/512/733/733641.png" alt="whatsapp" ></a>
+                <p class="info">+51 925 523 541</p>
+              </div>
+              <div class="contenedor-direccion">
+                <a class="contenedor-icono" href="">
+                    <img class="icono" src="https://cdn-icons-png.flaticon.com/512/725/725643.png" alt="correo" width="30">
+                </a>
+                <p class="info">Empresa@gmail.com</p>
+            </div>
+          </div>
+          <div class="contacto">
+            <h2 class="titulo-info">Te Contactamos</h2>
+            <input class="input-contacto" type="text" name="nombre" id="nombre" placeholder="Nombres">
+            <input class="input-contacto" type="email" name="email" id="email" placeholder="Email">
+            <textarea class="input-contacto" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+            <button class="boton-contacto">Enviar</button>
+          </div>
+        
+        </div>
+
+      </footer>
+      
+
+
+
+
+    
 </body>
 </html>
