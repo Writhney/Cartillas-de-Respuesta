@@ -66,3 +66,120 @@
     font-size: 1rem;
     
 }
+
+
+.requisitoCartilla{
+    text-align: center;
+    padding: 2rem 0;
+
+}
+
+.titulo-cartilla{
+    font-size: 2rem;
+}
+
+.form-container{
+    padding: 0 2rem;
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-info2{
+    display: inline-flex;
+    justify-content: center;
+    gap: 4rem;
+
+    /*text-align: right;
+        display: flex;
+    flex-direction: column;*/
+
+}
+
+.cantidadPreguntas-container{
+    padding: 1rem;
+    
+
+}
+
+.labelPreguntas{
+    font-size: 1rem;
+
+}
+.input-pregunta{
+    text-decoration: none;
+    border: 0.25rem solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    outline: none;
+    width: 4rem;
+}
+
+.input-pregunta::-webkit-inner-spin-button{
+    
+    
+}
+
+.input-file::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.input-file::before{
+    content: 'Selecciona el archivo';
+    display: inline-block;
+    /*background: linear-gradient(top, #f9f9f9, #e3e3e3);*/
+    border: 0.25rem solid rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    padding: 5px 8px;
+    /*outline: none;*/
+    /*white-space: nowrap;*/
+    /*-webkit-user-select: none;*/
+    text-shadow: 1px 1px #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    
+}
+
+
+
+.input-file:hover::before{
+    border-color: rgb(56, 150, 204);
+    color: rgb(56, 150, 204);
+}
+
+.input-file:active::before{
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.input-pregunta:hover{
+    border: 0.25rem solid #61dafb;
+    transition: all 0.4s;
+}
+
+.container-cartilla{
+    display: inline;
+    
+}
+
+.boton-GenerarI{
+    display: flex;
+    display: inline;
+    max-width: 10rem;
+    background-color: #C70039 ;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s;
+    align-self: center;
+}
+.boton-img{
+    width: 100%;
+}
+
+.boton-GenerarI:hover{
+    background-color: #FFC300;
+    border: 0.1rem solid #000;  
+}
