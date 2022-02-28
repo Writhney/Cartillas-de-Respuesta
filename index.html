@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="./css/estilo.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="shortcut icon" href="./img/ico.ico" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap" rel="stylesheet">
+    
     <!-- Primary Meta Tags -->
 <title>Generación de Cartillas de Respuesta</title>
 <meta name="title" content="Generación de Cartillas de Respuesta">
@@ -26,12 +34,21 @@
     <title>Cartillas</title>
 </head>
 <body class="body">
+  <script src="./js/index.js"></script>
+
+
     <header class="header">
         <nav class="header-nav">
           <a href="#" class="header-nav__link-logo-container">
             <img src="./img/technology.png" 
             alt="Logo Empresa" class="header-nav__logo" />
           </a>
+
+          <label for="menu" class="header-nav__menu-icon">
+            <i class="fas fa-bars"></i>
+          </label>
+          <input type="checkbox" name="menu" id="menu" class="header-nav__menu-checkbox" />
+          
           <ul class="header-nav__link-list">
             <li class="header-nav__link-item">
               <a href="#generacion" class="header-nav__link">Generación</a>
@@ -42,47 +59,126 @@
             <li class="header-nav__link-item">
               <a href="#informacion" class="header-nav__link">Información</a>
             </li>
-            
           </ul>
         </nav>
       </header>
 
       <main class="requisitoCartilla" id="generacion">
-        <h1 class="titulo-cartilla" >Generación de Cartillas de Respuesta</h1>
+        <div name="form-reloj" id="contenedorReloj" class="contenedor-reloj">
+          <h3 id="relojPantalla" class="relojPantalla"></h3>
+        </div>
+        <h1  class="titulo-cartilla" >Generación de Cartillas de Respuesta</h1>
         <form class="form-container">
-          
+        
           <section class="section-info">
+            
 
           <div class="cantidadPreguntas-container">
             <label class="labelPreguntas" for="">Cantidad de Preguntas</label>
-              <input value="20" class="input-pregunta" min="1" max="100" type="number" name="cantPreg" id="">
+              <input id="cantidadPreguntas" class="input-pregunta" min="1" max="100" maxlength="3" type="number" name="cantPreg" required>
           </div>
           <div class="cantidadPreguntas-container">
-            <label for="labelPreguntas">Cantidad de Alternativas</label>
-              <input value="4" class="input-pregunta" min="1" max="10" type="number" name="cantAlte" id="" minlength="1" maxlength="5">
+            <label class="labelPreguntas" for="">Cantidad de Alternativas</label>
+              <input id="cantidadAlternativas" class="input-pregunta" min="1" max="6" maxlength="1" type="number" name="cantAlte" required>
           </div>
           <div class="cantidadPreguntas-container">
-            <label class="labelPreguntas" for="">Subir Datos de los Estudiantes</label>
-              <input class="input-file" type="file" name="datosEstu" src="" alt="">
+            <label class="labelPreguntas" for="">Subir Datos</label>
+              <input id="inputFile" class="input-file" type="file" name="datosEstu" src="" alt="">
           </div>
-
+          
           </section>
           
           <section class="section-info2">
             <div class="container-cartilla">
-              
-              <button class="boton-GenerarI">
-                <img class="boton-img" src="https://cdn-icons-png.flaticon.com/512/4068/4068569.png" alt="Generar"> Generar Cartillas</button>
+              <button href="#preguntas" class="boton-GenerarI" id="botonGenerar">Generar
+               <img class="boton-img" src="https://cdn-icons-png.flaticon.com/512/20/20121.png" alt="">
+              </button>
             </div>
             <div class="container-cartilla">
-              <button class="boton-GenerarI" >
-                <img class="boton-img" src="https://cdn-icons-png.flaticon.com/512/839/839286.png" alt="Imprimir"> Imprimir</button>
+              <button class="boton-GenerarI" > Imprimir
+                <img class="boton-img" src="https://cdn-icons-png.flaticon.com/512/4305/4305625.png" alt="">
+                </button>
             </div>
           </section>
         </form>
+      
       </main>
-
+<!--
+      <section class="projects">
+        <div class="projects-container">
+          <h3 class="projects__title"> Modelos de Cartillas </h3>
+          <div class="projects__projects">
+            <article class="projects__project">
+              <figure class="projects__project-image-container">
+                <img src="./img/cartilla.PNG" alt="Miniatura de cartilla"
+                  class="projects__project-image" />
+              </figure>
+              <div class="projects__project-data">
+                <h2 class="projects__project-data-title">Cartilla</h2>
+                <h3 class="projects__project-data-content-1">Modelo 1</h3>
+                <h4 class="projects__project-data-content-2">Black Color</h4>
+              </div>
+              <div class="projects__project-button-container">
+                <a href="#" class="projects__project-button projects__project-button--bg-gold">Ver</a>
+                <a href="#" class="projects__project-button">Usar</a>
+              </div>
+            </article>  
+            
+            <article class="projects__project">
+              <figure class="projects__project-image-container">
+                <img src="./img/cartilla.PNG" alt="Miniatura de cartilla"
+                  class="projects__project-image" />
+              </figure>
+              <div class="projects__project-data">
+                <h2 class="projects__project-data-title">Cartilla</h2>
+                <h3 class="projects__project-data-content-1">Modelo 2</h3>
+                <h4 class="projects__project-data-content-2">Red Color</h4>
+              </div>
+              <div class="projects__project-button-container">
+                <a href="#" class="projects__project-button projects__project-button--bg-gold">Ver</a>
+                <a href="#" class="projects__project-button">Usar</a>
+              </div>
+            </article>
+  
+            <article class="projects__project">
+              <figure class="projects__project-image-container">
+                <img src="./img/cartilla.PNG" alt="Miniatura de cartilla"
+                  class="projects__project-image" />
+              </figure>
+              <div class="projects__project-data">
+                <h2 class="projects__project-data-title">Cartilla</h2>
+                <h3 class="projects__project-data-content-1">Modelo 3</h3>
+                <h4 class="projects__project-data-content-2">Green Color</h4>
+              </div>
+              <div class="projects__project-button-container">
+                <a href="#" class="projects__project-button projects__project-button--bg-gold">Ver</a>
+                <a href="#" class="projects__project-button">Usar</a>
+              </div>
+            </article>
+  
+            <article class="projects__project">
+              <figure class="projects__project-image-container">
+                <img src="./img/cartilla.PNG" alt="Miniatura de cartilla"
+                  class="projects__project-image" />
+              </figure>
+              <div class="projects__project-data">
+                <h2 class="projects__project-data-title">Cartilla</h2>
+                <h3 class="projects__project-data-content-1">Modelo 4</h3>
+                <h4 class="projects__project-data-content-2">Yelow Color</h4>
+              </div>
+              <div class="projects__project-button-container">
+                <a href="#" class="projects__project-button projects__project-button--bg-gold">Ver</a>
+                <a href="#" class="projects__project-button">Usar</a>
+              </div>
+            </article>
+  
+          </div>
+        </div>
+      </section>
+-->
     <section class="cartilla"> 
+      
+
       <section class="cartilla-contedor">
         <section class="contenedor-logo">
           <img class="logo-cartilla" src="https://examen.admisionunajma.pe/public/img/para%20admision.png" alt="LogoInstutucón">
@@ -93,13 +189,13 @@
 
             <ul class="contenedor-lista-datos">
               <li class="descripcion">DNI</li>
-              <li class="dato">70254251</li>
+              <li class="dato" id="dni"></li>
               <li class="descripcion">NOMBRES</li>
-              <li class="dato">KEVIN ADRIEL</li>
+              <li class="dato" id="nombres"></li>
               <li class="descripcion">APELLIDOS</li>
-              <li class="dato">GONZALES LOAYZA</li>
+              <li class="dato" id="apellidos"></li>
               <li class="descripcion">CARRERA PROFESIONAL</li>
-              <li class="dato">CONTABILIDAD</li>
+              <li class="dato" id="carrera"></li>
             </ul>
           </div>
           <div class="contenedor-aula-url">
@@ -127,83 +223,19 @@
         </section>
 
         <h2 class="titulo-respuestas">Cartilla de Respuestas</h2>
-        <div class="contenedor-preguntas">
-        <section class="preguntas">
+        <div class="contenedor-preguntas" id="contenedorPreguntas">
           
-          <ol class="pregunta-lista">
-            <li class="numero"> 01</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">02</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">03</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">04</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">05</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">06</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">07</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">08</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">09</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">10</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
           
-        </section>
-      
-        <section class="preguntas">
           
-          <ol class="pregunta-lista">
-            <li class="numero">11</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">12</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">13</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">14</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">15</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">16</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">17</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">18</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">19</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-          <ol class="pregunta-lista">
-            <li class="numero">20</li><li class="alternativa">A</li><li class="alternativa">B</li><li class="alternativa">C</li><li class="alternativa">D</li>
-          </ol>
-        </section>
 
       </div>
       </section>
     </section> 
 
+
     <figure class="separador-container">
       <svg class="wave-separador" xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 1440 320"><path fill="#FFC300" fill-opacity="1" 
+      viewBox="0 0 1440 320"><path fill="#ffffffb6" fill-opacity="1" 
       d="M0,128L30,133.3C60,139,120,149,180,165.3C240,181,300,203,360,213.3C420,224,480,224,540,213.3C600,203,660,181,720,165.3C780,149,840,139,900,144C960,149,1020,171,1080,197.3C1140,224,1200,256,1260,272C1320,288,1380,288,1410,288L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
       </svg>
     </figure>
@@ -238,7 +270,7 @@
               <div class="contenedor-direccion">
                 <a class="contenedor-icono" href="">
                     <img class="icono" src="https://cdn-icons-png.flaticon.com/512/733/733641.png" alt="whatsapp" ></a>
-                <p class="info">+51 925 523 541</p>
+                <p class="info">925 523 541</p>
               </div>
               <div class="contenedor-direccion">
                 <a class="contenedor-icono" href="">
@@ -259,6 +291,9 @@
 
       </footer>
       
+
+      <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+
 
 
 
