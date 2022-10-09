@@ -3,6 +3,9 @@
 let documentReady = () => {
     const contenedorPreguntas = document.getElementById('contenedorPreguntas');
     const botonGenerar = window.document.getElementById('botonGenerar');
+    const botonImprimir = window.document.getElementById('botonImprimir');
+    let cartilla = window.document.getElementById('cartilla');
+    
 
     //RELOJ
     let mueveReloj = () => {
@@ -18,7 +21,7 @@ let documentReady = () => {
         
         relojPantalla.innerHTML=`${horaImprimible}`;        
     }   
-    setInterval(mueveReloj,1000);
+    //setInterval(mueveReloj,1000);
 
     //LEER TXT DATOS
     let file = document.getElementById("inputFile");
@@ -95,8 +98,6 @@ let documentReady = () => {
         };
     }
 
-    
-    
     function valoresValidos (){
         let cantidad_Preguntas = document.getElementById('cantidadPreguntas').value;
         let cantidad_Alternativas = document.getElementById('cantidadAlternativas').value;
@@ -111,8 +112,64 @@ let documentReady = () => {
         }
     } 
     botonGenerar.addEventListener('click', valoresValidos());
-
     
+    function generarPDF(){
+        console.log('presionando boton imprimir');
+        cartilla = window.document.getElementById('cartilla');
+        let doc = new jsPDF('p', 'pt', 'letter');
+        const margin = 10;
+        const scale = (doc.internal.pageSize.width - margin*2)/ document.body.scrollWidth;
+        doc.html(cartilla, {
+            x: margin,
+            y: margin,
+            html2canvas: {
+                scale: scale*1.2,
+            },
+            callback: function(doc){
+                doc.save('cartilla.pdf');
+                doc.output('dataurlnewwindow', {filename: 'cartilla.pdf'})
+            }
+        })
+    }
+
+    botonImprimir.addEventListener('click', ()=>{
+        console.log('presionando boton imprimir');
+        cartilla = window.document.getElementById('cartilla');
+        let doc = new jsPDF('p', 'pt', 'letter');
+        const margin = 10;
+        const scale = (doc.internal.pageSize.width - margin*2)/ document.body.scrollWidth;
+        doc.html(cartilla, {
+            x: margin,
+            y: margin,
+            html2canvas: {
+                scale: scale*0.8,
+            },
+            callback: function(doc){
+                doc.save('cartilla.pdf');
+                doc.output('dataurlnewwindow', {filename: 'cartilla.pdf'})
+            }
+        })
+    });
+    
+    
+   /*
+    let generarPDF = (e) => {
+        
+        let cartilla = document.getElementById('cartilla');
+        html2canvas(cartilla).then((result) => {
+            let image = result.toDataURL('image/png');
+            let pdf = new jsPDF('p', 'px', 'letter');
+            pdf.addImage(image, 'PNG',50,50,100,200 );
+            pdf.save('cartilla.pdf');
+        }).catch((err) => {
+            console.log(err);
+        });
+        //cartilla.print();
+        //window.print();
+        
+    }
+    */
+   
 
 }
 document.addEventListener('DOMContentLoaded', documentReady);
