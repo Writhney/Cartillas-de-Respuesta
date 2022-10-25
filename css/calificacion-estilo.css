@@ -1,0 +1,75 @@
+.input-file::before{
+    content: 'Selecciona la carpeta';
+    display: inline-block;
+    border: none;
+    padding: 10px 50px;
+    color: var(--box-shadow-1);
+    background: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.container-cartilla{
+    padding: 1rem;
+}
+.boton-GenerarI{
+    gap: 1rem;
+}
+.boton-img{
+    width: 70px;
+}
+
+.modal{
+ padding: 1rem;   
+}
+.modal-container{
+    margin: auto;
+    max-width: 700px;
+    background-color: rgba(137, 43, 226, 0.523);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-section__tipo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+.modal-section__tipo-title{}
+.modal-section__tipo-container-datos{
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+}
+.modal-section__tipo-datos-label{}
+.modal-section__tipo-datos-options{ }
+.modal-section__tipo-container-options{}
+.modal-section__tipo-option-label{}
+.modal-section__tipo-option-input{}
+.modal-section__tipo-container-o{
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+}
+.modal-section__tipo-o-label{}
+.modal-section__tipo-o-input{
+}
+.modal-section__servidor{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.modal-button-save{
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.modal-button-salir{
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    top: -680px;
+    left: 300px;
+}
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="./../img/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="./../css/calificacion-estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap" rel="stylesheet">
+
+    <title>calificacion</title>
+</head>
+<body class="body">
+    <script src="./../js/calificacion.js"></script>
+    <header class="header">
+        <nav class="header-nav">
+          <a href="#" class="header-nav__link-logo-container">
+            <img src="./../img/technology.png" 
+            alt="Logo Empresa" class="header-nav__logo" />
+          </a>
+
+          <label for="menu" class="header-nav__menu-icon">
+            <i class="fas fa-bars"></i>
+          </label>
+          <input type="checkbox" name="menu" id="menu" class="header-nav__menu-checkbox" />
+          
+          <ul class="header-nav__link-list">
+            <li class="header-nav__link-item">
+              <a href="./../index.html" class="header-nav__link">Generación</a>
+            </li>
+            <li class="header-nav__link-item">
+              <a href="/pages/calificacion.html" class="header-nav__link">Calificación</a>
+            </li>
+            <li class="header-nav__link-item">
+              <a href="#informacion" class="header-nav__link">Información</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="requisitoCartilla" id="generacion">
+        <div name="form-reloj" id="contenedorReloj" class="contenedor-reloj">
+          <h3 id="relojPantalla" class="relojPantalla"></h3>
+        </div>
+        <h1  class="titulo-cartilla" >Calificación de Cartillas de Respuesta</h1>
+        <form class="form-container">
+        
+          <section class="section-info">
+            
+          <div class="cantidadPreguntas-container">
+            <label class="labelPreguntas" for="">Subir Cartillas</label>
+              <input id="subirCarpetaCartillas" class="input-file" type="file">
+          </div>
+          <div class="previsualization-load-img" id="imgPreviewLoad">
+            
+          </div>
+          
+          
+          </section>
+          
+          <section class="section-info2">
+            <div class="container-cartilla">
+              <button href="#" class="boton-GenerarI" id="">Configuración
+               <img class="boton-img" src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png" alt="">
+              </button>
+            </div> 
+            <!--
+            <div class="container-cartilla">
+              <button class="boton-GenerarI" id="" type="button"> Imprimir
+                <img class="boton-img" src="https://cdn-icons-png.flaticon.com/512/4305/4305625.png" alt="">
+                </button>
+            </div>  
+            -->
+            
+          </section>
+          
+        </form>
+        <section class="modal">
+          <div class="modal-container">
+          <div class="modal-section__tipo">
+            <h3 class="modal-section__tipo-title">TIPO</h3>
+            <div class="modal-section__tipo-container-datos">
+              <label class="modal-section__tipo-datos-label" for="">Registro de datos en</label>
+              <div class="modal-section__tipo-datos-options">
+                <div class="modal-section__tipo-container-options">
+                  <label class="modal-section__tipo-option-label" for="">Servidor</label>
+                  <input class="modal-section__tipo-option-input" type="checkbox" name="" id="">
+                </div>
+                <div class="modal-section__tipo-container-options">
+                  <label class="modal-section__tipo-option-label" for="">Fichero</label>
+                  <input class="modal-section__tipo-option-input" type="checkbox" name="" id="">
+                </div>
+                <div class="modal-section__tipo-container-options">
+                  <label class="modal-section__tipo-option-label" for="">Mysql</label>
+                  <input class="modal-section__tipo-option-input" type="checkbox" name="" id="">
+                </div>
+              </div>
+            </div>
+            <div class="modal-section__tipo-container-o">
+              <label class="modal-section__tipo-o-label" for="">Umbral de detección</label>
+              <input class="modal-section__tipo-o-input" type="text" name="" id="">
+            </div>
+            <div class="modal-section__tipo-container-o">
+              <label class="modal-section__tipo-o-label" for="">Proposicion Minima</label>
+              <input class="modal-section__tipo-o-input" type="text">
+            </div>
+            <div class="modal-section__tipo-container-o">
+              <label class="modal-section__tipo-o-label" for="">Proposicion Maxima</label>
+              <input class="modal-section__tipo-o-input" type="text">
+            </div>
+            <div class="modal-section__tipo-container-o">
+              <label class="modal-section__tipo-o-label" for="">Ancho minimo</label>
+              <input class="modal-section__tipo-o-input" type="text">
+            </div>
+            <div class="modal-section__tipo-container-o">
+              <label class="modal-section__tipo-o-label" for="">Alto minimo</label>
+              <input class="modal-section__tipo-o-input" type="text">
+            </div>
+          </div>
+          <div class="modal-section__servidor">
+            <h3 class="modal-section__tipo-title">SERVIDOR</h3>
+            <div class="modal-section__tipo-container-o">
+              <label class="modal-section__tipo-o-label" for="">IP Servidor</label>
+              <input class="modal-section__tipo-o-input" type="text">
+            </div>
+            <div class="modal-section__tipo-container-o">
+              <label class="modal-section__tipo-o-label" for="">Nombre del Usuario</label>
+              <input class="modal-section__tipo-o-input" type="text">
+            </div>
+            <div class="modal-section__tipo-container-o">
+              <label class="modal-section__tipo-o-label" for="">Base de Datos</label>
+              <input class="modal-section__tipo-o-input" type="text">
+            </div>
+            <div class="modal-section__tipo-container-o">
+              <label class="modal-section__tipo-o-label" for="">Clave de Acceso</label>
+              <input class="modal-section__tipo-o-input" type="password">
+            </div>
+          </div>
+          <div class="modal-section__fichero">
+            <h3>FICHERO</h3>
+            <label for="">Fichero</label>
+          </div>
+          <button class="modal-button-save" type="button">
+            Guardar Configuración
+          </button>
+          <div class="modal-button-salir">
+            <img src="" alt="">
+            X
+          </div>
+          </div>
+        </section>
+      
+      </main>
+    
+
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+
+</body>
+</html>
